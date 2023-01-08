@@ -7,17 +7,19 @@ function SignUp({ setIsAuth }) {
   const [user, setUser] = useState(null);
 
   const signUp = () => {
-    Axios.post("https://tic-tac-toe-k7p3.onrender.com", user).then((res) => {
-      const { token, userId, firstName, lastName, username, hashedPassword } =
-        res.data;
-      cookies.set("token", token);
-      cookies.set("userId", userId);
-      cookies.set("username", username);
-      cookies.set("firstName", firstName);
-      cookies.set("lastName", lastName);
-      cookies.set("hashedPassword", hashedPassword);
-      setIsAuth(true);
-    });
+    Axios.post("https://tic-tac-toe-k7p3.onrender.com/signup", user).then(
+      (res) => {
+        const { token, userId, firstName, lastName, username, hashedPassword } =
+          res.data;
+        cookies.set("token", token);
+        cookies.set("userId", userId);
+        cookies.set("username", username);
+        cookies.set("firstName", firstName);
+        cookies.set("lastName", lastName);
+        cookies.set("hashedPassword", hashedPassword);
+        setIsAuth(true);
+      }
+    );
   };
   return (
     <div className="signUp">

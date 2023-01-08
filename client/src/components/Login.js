@@ -8,7 +8,7 @@ function Login({ setIsAuth }) {
 
   const cookies = new Cookies();
   const login = () => {
-    Axios.post("https://tic-tac-toe-k7p3.onrender.com", {
+    Axios.post("https://tic-tac-toe-k7p3.onrender.com/login", {
       username,
       password,
     }).then((res) => {
