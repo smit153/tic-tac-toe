@@ -57,7 +57,7 @@ function App() {
           </div>
         </>
       ) : (
-        <div className="d-flex justify-content-center align-items-center h-100">
+        <div className="d-flex justify-content-center align-items-center h-100 App">
           <SignUp setIsAuth={setIsAuth} />
           <Login setIsAuth={setIsAuth} />
         </div>
